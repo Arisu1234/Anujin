@@ -78,7 +78,7 @@
   </head>  
   <body>
 
-    <a-scene>
+    <a-scene >
       <a-assets>
         <img id="pro" src="anu.jpg">
         <img id="fb" src="facebook.png">
@@ -91,22 +91,23 @@
       </a-assets>
       
       <a-camera position="0 1.2 0">
-        <a-cursor maxDistance: 30; fuse="true" color="black" scale="0.65 0.65 0.65"  intersection-spawn="Event: click; mixin:voxel;"></a-cursor>
+        <a-cursor maxDistance: 30; cursor="fuse:true; fuse-timeout:500" color="black" scale="0.6 0.6 0.6"  intersection-spawn="Event: click; mixin:voxel;"></a-cursor>
       </a-camera>
+      
 
 
       <a-entity  position="-10 -4 0" rotation="0 90 0" environment="preset: tron; gridColor: #ed7014; dressing: none; ground: flat; lighting: distant"
                 hide-in-ar-mode></a-entity>
       
       <a-entity id="dino" position="-1 0 -3" scale="0.5 0.5 0.5">
-        <a-entity position="2 1.8 3.5" scale="0.5 0.5 0.5" rotation="-30 0 0">
+        <a-entity position="2 1.8 3.5" scale="0.5 0.5 0.5" rotation="-25 0 0">
                   <a-image height="3" width="2.3" src="#pro"></a-image>
         <a-plane position="0 -1.65 0.1"  width="2.3" height="0.6"></a-plane>
         <a-text value="B. Anujin" color="black" width="5" position="-1 -1.45 0.2"></a-text>
         <a-text value="Brand manager" color="black" width="4" position="-1 -1.7 0.2"></a-text>
         <a-image id="fblink" src="#fb" height="0.7" width="0.7" position="-1.98 0 0" ></a-image>
         <a-image id="weblink" src="#web" height="0.7" width="0.7" position="-1.98 -1.3 0"></a-image>
-        <a-image id="phonelink" src="#phone" height="0.7" width="0.7" position="1.98 -0.05 0"></a-image>
+        <a-image id="phonelink" src="#phone" height="0.7" width="0.7" position="1.98 -0.04 0"></a-image>
         <a-image id="maplink" src="#map" height="0.7" width="0.7" position="1.98 -1.3 0"></a-image>
         <a-gltf-model src="#suuri" scale="0.4 0.4 0.4" rotation="90 0 0" position="-2 0 -0.195"></a-gltf-model>
         <a-gltf-model src="#suuri" scale="0.4 0.4 0.4" rotation="90 0 0" position="-2 -1.3 -0.195"></a-gltf-model>
@@ -128,6 +129,7 @@
                target="dino"
                position="-5 3 1.5"></a-light>
 
+å
       <a-plane height="15" width="15" position="0 0 -3" rotation="-90 0 0"
                shadow="receive: true"
                ar-shadows="opacity: 0.3"
@@ -140,20 +142,20 @@
     document
       .querySelector("#fblink")
       .addEventListener("mouseenter", e => {
-         location.href = "https://www.facebook.com/bodielectronics"
+         window.open('https://www.facebook.com/bodielectronics');
       });
 
       document
       .querySelector("#weblink")
       .addEventListener("mouseenter", e => {
-         location.href = "https://www.bodi-electronics.mn/"
+         window.open('https://www.bodi-electronics.mn/');
       });
 
 
       document
       .querySelector("#phonelink")
       .addEventListener("mouseenter", e => {
-         location.href = "https://vb.me/letsChatOnViber"
+         window.open('https://vb.me/letsChatOnViber');
       });
 
 
@@ -161,7 +163,8 @@
       document
       .querySelector("#maplink")
       .addEventListener("mouseenter", e => {
-         location.href = "https://goo.gl/maps/jQgBjEs8jkwr9d449"
+         window.open('https://goo.gl/maps/jQgBjEs8jkwr9d449');
+         
 
       });
 
