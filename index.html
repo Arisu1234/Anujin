@@ -83,7 +83,7 @@
         <img id="pro" src="anu.jpg">
         <img id="fb" src="facebook.png">
         <img id="web" src="web.png">
-        <img id="phone" src="viber.png">
+        <img id="phone" src="insta.png">
         <img id="map" src="maps.png">
         <a-gltf-model id="suuri" src="suuri.gltf"></a-gltf-model>
         <a href="https://www.facebook.com/bodielectronics"></a>
@@ -107,7 +107,7 @@
         <a-text value="Brand manager" color="black" width="4" position="-1 -1.7 0.2"></a-text>
         <a-image id="fblink" src="#fb" height="0.7" width="0.7" position="-1.98 0 0" ></a-image>
         <a-image id="weblink" src="#web" height="0.7" width="0.7" position="-1.98 -1.3 0"></a-image>
-        <a-image id="phonelink" src="#phone" height="0.7" width="0.7" position="1.98 -0.04 0"></a-image>
+        <a-image id="phonelink" src="#phone" height="0.7" width="0.7" position="1.98 -0 0"></a-image>
         <a-image id="maplink" src="#map" height="0.7" width="0.7" position="1.98 -1.3 0"></a-image>
         <a-gltf-model src="#suuri" scale="0.4 0.4 0.4" rotation="90 0 0" position="-2 0 -0.195"></a-gltf-model>
         <a-gltf-model src="#suuri" scale="0.4 0.4 0.4" rotation="90 0 0" position="-2 -1.3 -0.195"></a-gltf-model>
@@ -142,20 +142,20 @@
     document
       .querySelector("#fblink")
       .addEventListener("mouseenter", e => {
-         window.open('https://www.facebook.com/bodielectronics');
+         location.href = "https://www.facebook.com/bodielectronics"
       });
 
       document
       .querySelector("#weblink")
       .addEventListener("mouseenter", e => {
-         window.open('https://www.bodi-electronics.mn/');
+         location.href = "https://www.bodi-electronics.mn/"
       });
 
 
       document
       .querySelector("#phonelink")
       .addEventListener("mouseenter", e => {
-         window.open('https://vb.me/letsChatOnViber');
+         location.href = "https://www.instagram.com/miele.mongolia/"
       });
 
 
@@ -163,7 +163,7 @@
       document
       .querySelector("#maplink")
       .addEventListener("mouseenter", e => {
-         window.open('https://goo.gl/maps/jQgBjEs8jkwr9d449');
+         location.href = "https://goo.gl/maps/jQgBjEs8jkwr9d449"
          
 
       });
